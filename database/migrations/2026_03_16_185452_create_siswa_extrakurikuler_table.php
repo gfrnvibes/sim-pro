@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siswa_extrakulikuler', function (Blueprint $table) {
+        Schema::create('siswa_extrakurikuler', function (Blueprint $table) {
             $table->id();
             $table->foreignId('siswa_id')->constrained()->onDelete('cascade');
-            $table->foreignId('ekstrakurikuler_id')->constrained()->onDelete('cascade');
+            $table->foreignId('extrakurikuler_id')->constrained()->onDelete('cascade');
             $table->foreignId('tahun_ajaran_id')->constrained()->onDelete('cascade');
             $table->unsignedTinyInteger('semester')->nullable(); // 1 atau 2, atau null jika tahunan
             $table->string('jabatan', 50)->nullable();           // Ketua, Anggota, dll
@@ -23,7 +23,10 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unique(['siswa_id', 'ekstrakurikuler_id', 'tahun_ajaran_id']);
+            $table->unique(
+                        ['siswa_id', 'extrakurikuler_id', 'tahun_ajaran_id'],
+                        'siswa_extra_unique'
+                    );
         });
     }
 
@@ -32,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siswa_extrakulikuler');
+        Schema::dropIfExists('siswa_extrakurikuler');
     }
 };

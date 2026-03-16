@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('extrakulikulers', function (Blueprint $table) {
+        Schema::create('extrakurikulers', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 100);                    // Pramuka, Paskibra, Rohis, Tari Saman, dll
             $table->string('kode', 20)->unique()->nullable();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('extra_kulikulers');
+        Schema::dropIfExists('extrakurikulers');
     }
 };
