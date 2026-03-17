@@ -16,8 +16,8 @@ class KurikulumVersion extends Model
     ];
 
     // Jika nanti ingin relasi ke MataPelajaran atau CapaianPembelajaran
-    // public function mataPelajarans()
-    // {
-    //     return $this->hasMany(MataPelajaran::class);
-    // }
+    public function mataPelajarans()
+    {
+        return $this->hasMany(MataPelajaran::class);
+    }
 }

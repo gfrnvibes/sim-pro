@@ -54,10 +54,21 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->plugins([
-                FilamentShieldPlugin::make(),
+                FilamentShieldPlugin::make()
+                    ->navigationLabel('Label')                  
+                    ->navigationIcon('heroicon-o-shield-check')          
+                    ->activeNavigationIcon('heroicon-s-shield-check')   
+                    ->navigationGroup('Pengguna'),
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->navigationGroups([
+                'Penilaian',
+                'Kelas',
+                'Data Siswa',
+                'Minat & Bakat',
+                'Master',
             ]);
     }
 }

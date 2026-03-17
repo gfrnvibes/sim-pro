@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('mulai');
             $table->date('selesai')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
