@@ -25,6 +25,7 @@ class OrangTuaResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
     protected static string | UnitEnum | null $navigationGroup = 'Data Siswa';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

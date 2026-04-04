@@ -27,6 +27,7 @@ class SiswaResource extends Resource
 
     protected static string | UnitEnum | null $navigationGroup = 'Data Siswa';
     protected static ?int $navigationSort = 5;
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

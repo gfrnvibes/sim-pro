@@ -29,8 +29,8 @@ class SiswaForm
                         TextInput::make('nama_lengkap')
                             ->label('Nama Lengkap')
                             ->required(),
-                        TextInput::make('nama_panggilan')
-                            ->label('Nama Panggilan'),
+                        Select::make('siswaKelas')
+                            ->label('Kelas Aktif'),
                         Select::make('jenis_kelamin')
                             ->options(['L' => 'L', 'P' => 'P'])
                             ->required(),

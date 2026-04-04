@@ -25,6 +25,7 @@ class CapaianPembelajaranResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ArrowTrendingUp;
     protected static string | UnitEnum | null $navigationGroup = 'Master';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

@@ -31,6 +31,7 @@ class KelasResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::BuildingLibrary;
     protected static string | UnitEnum | null $navigationGroup = 'Kelas';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

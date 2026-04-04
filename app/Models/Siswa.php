@@ -36,14 +36,10 @@ class Siswa extends Model
 
     public function kelasAktif()
     {
-        return $this->hasOneThrough(
-            Kelas::class,
-            SiswaKelas::class,
-            'siswa_id',
-            'id',
-            'id',
-            'kelas_id'
-        )->where('siswa_kelas.status', 'Aktif');
+        return $this->siswaKelas()
+            ->where('status', 'Aktif')
+            ->latest()
+            ->with('kelas');
     }
 
     public function penilaianSiswas()

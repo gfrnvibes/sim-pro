@@ -20,9 +20,15 @@ class UsersTable
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),
+                TextColumn::make('roles.name')
+                    ->label('Role')
+                    ->badge()
+                    ->color('info')
+                    ->searchable(),
                 TextColumn::make('email_verified_at')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

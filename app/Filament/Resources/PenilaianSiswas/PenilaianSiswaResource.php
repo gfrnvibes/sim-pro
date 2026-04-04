@@ -25,6 +25,7 @@ class PenilaianSiswaResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Sparkles;
     protected static string | UnitEnum | null $navigationGroup = 'Penilaian';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

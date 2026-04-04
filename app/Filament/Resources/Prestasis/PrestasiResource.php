@@ -25,6 +25,7 @@ class PrestasiResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Trophy;
     protected static string | UnitEnum | null $navigationGroup = 'Minat & Bakat';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

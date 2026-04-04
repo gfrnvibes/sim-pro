@@ -33,6 +33,7 @@ class MataPelajaranResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::QueueList;
     protected static string | UnitEnum | null $navigationGroup = 'Master';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

@@ -41,11 +41,6 @@ class PenilaianSiswa extends Model
     // Relasi
     // --------------------------------------------------
 
-    public function siswaKelas(): BelongsTo
-    {
-        return $this->belongsTo(SiswaKelas::class);
-    }
-
     public function capaianPembelajaran(): BelongsTo
     {
         return $this->belongsTo(CapaianPembelajaran::class);
@@ -84,6 +79,11 @@ class PenilaianSiswa extends Model
             'siswa_kelas_id',
             'kelas_id'
         );
+    }
+
+    public function siswaKelas(): BelongsTo
+    {
+        return $this->belongsTo(SiswaKelas::class);
     }
 
     // --------------------------------------------------

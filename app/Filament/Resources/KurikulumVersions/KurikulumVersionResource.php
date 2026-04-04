@@ -33,6 +33,7 @@ class KurikulumVersionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
     protected static string | UnitEnum | null $navigationGroup = 'Master';
+    protected static bool $shouldRegisterNavigation = false;
 
     public static function form(Schema $schema): Schema
     {

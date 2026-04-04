@@ -28,11 +28,11 @@ return new class extends Migration
             $table->string('kabupaten', 100)->nullable();
             $table->string('provinsi', 100)->nullable();
             $table->string('kode_pos', 10)->nullable();
-            $table->string('foto_path')->nullable(); // path ke storage
+            $table->string('foto_path')->nullable(); 
             $table->string('golongan_darah', 5)->nullable();
-            $table->unsignedSmallInteger('tinggi_badan')->nullable(); // cm
-            $table->unsignedSmallInteger('berat_badan')->nullable();  // kg
-            $table->unsignedMediumInteger('jarak_rumah_ke_sekolah')->nullable(); // meter
+            $table->unsignedSmallInteger('tinggi_badan')->nullable(); 
+            $table->unsignedSmallInteger('berat_badan')->nullable();  
+            $table->unsignedMediumInteger('jarak_rumah_ke_sekolah')->nullable(); 
             $table->timestamps();
             $table->softDeletes();
         });
