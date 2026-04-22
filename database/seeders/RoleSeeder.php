@@ -14,17 +14,11 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         $roles = [
-            'super_admin',
-            'bendahara',
-            'kepsek',
-            'wali_kelas',
-            'guru',
-            'tata_usaha',
-            'operator',
-            'kesiswaan',
-            'pembina_ekskul',
-            'parent',
-            'siswa',
+            'Super Admin',
+            'Admin HR',
+            'Kepala Sekolah',
+            'Bendahara',
+            'Guru',
         ];
 
         foreach ($roles as $role) {
